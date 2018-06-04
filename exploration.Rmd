@@ -1,7 +1,7 @@
 ---
 title: "Exploration of sales data"
-author: "David Neuzerling"
-date: "May 7th, 2018"
+author: "Murray **David** Neuzerling"
+date: "June 4th, 2018"
 output:   
     html_document:
         toc: true
@@ -487,6 +487,9 @@ issue of dimesionality (eg. reducing the number of variables used in modelling)
 because the number of variables is initially small relative to the sample size.
 Moreover, random forests---which we will use initially---are forgiving of 
 superfluous variables.
+
+I regret the emphasis on simple accuracy rates when I should be considering 
+sensitivity and specificity, preferably with ROC curves.
 
 Our target variables will be either `sold_flag` for categorisation or 
 `sold_count` for regression. We will model on all variables except: 

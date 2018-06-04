@@ -2,6 +2,9 @@
 .Rhistory
 .Rapp.history
 
+# data, which should be downloaded from Kaggle
+*.csv
+
 # Session Data files
 .RData
 
