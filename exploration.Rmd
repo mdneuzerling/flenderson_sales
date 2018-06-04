@@ -8,7 +8,7 @@ output:
 ---
 
 ```{r setup_hidden, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, cache = TRUE, out.width="100%")
+# knitr::opts_chunk$set(echo = TRUE, cache = TRUE, out.width="100%")
 options(scipen=999)
 set.seed(42275)
 ```
@@ -135,7 +135,7 @@ I'm a big fan of the `visdat` package for looking at data for the first time.
 It gives variable types along with a visualisation of missing data.
 
 ```{r vis_dat, cache=TRUE}
-sales %>% visdat::vis_dat(warn_large_data = FALSE)
+sales %>% sample_n(10000) %>% arrange(order) %>% visdat::vis_dat()
 ```
 
 The missing data is entirely within the `sold_flag` and `sold_count` variables.
